@@ -7,6 +7,8 @@ var express = require('express');
 var app     = express();
 var bodyParser =require('body-parser');
 
+var mogoose = require('mongoose');
+mogoose.connect('mongodb://mongo:27017');
 
 // configure app to use boadyParser()
 // this will let us get the date from a POST
