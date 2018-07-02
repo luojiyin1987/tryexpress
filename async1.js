@@ -1,8 +1,9 @@
-const fs = require('fs')
-let content
-try{
-    content = fs.readFileSync('file.md', 'utf-8');
-} catch(ex) {
-    console.log(ex);
-}
-console.log(content)
+let myFirstPromise = new Promise((resolve, reject) => {
+    setTimeout( function() {
+        resolve("Success!");
+    }, 250);
+});
+
+myFirstPromise.then((successMessage) => {
+    console.log('Yay!' + successMessage);
+} );
